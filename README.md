@@ -2,7 +2,7 @@
 Repository dedicated to the classification of the minist database using neural networks programmed in python, only with the numpy library
 
 ## Requirements
-- [*Python3*] (https://www.python.org/downloads/release/python-382/) 
+- [Python3](https://www.python.org/downloads/release/python-382/) 
 - *numpy*
 ```bash
 pip install numpy
