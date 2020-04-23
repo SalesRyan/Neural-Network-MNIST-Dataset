@@ -74,10 +74,10 @@ The validation is composed by the metrics of accuracy recall that are usually us
 
 The artificial neural network implemented in python only with the library numpy obtained a result of Accuracy: 0.9398 and Recal: 0.9400592307897068 for the MNITS dataset.
 
-## about me
+## About me
 
 Graduation in Information Systems at the Federal University of Piauí, Possibility of experience with developing solutions in the area of Digital Image Processing, Computer Vision and Artificial Intelligence. I currently participate in research projects in the area of Vision and Computational Intelligence.
 
-[LinkedIn](https://www.linkedin.com/in/ryan-sales-2b10141a6/)
-[Lattes](http://lattes.cnpq.br/6944781068896428)
-[Instagram](https://www.instagram.com/sales.ryann/?hl=pt-br)
+- [*LinkedIn*](https://www.linkedin.com/in/ryan-sales-2b10141a6/)
+- [*Lattes*](http://lattes.cnpq.br/6944781068896428)
+- [*Instagram*](https://www.instagram.com/sales.ryann/?hl=pt-br)
