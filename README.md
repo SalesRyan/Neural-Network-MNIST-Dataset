@@ -1,10 +1,9 @@
-# Neural-Network-Mnist-Dataset
-Repository dedicated to the classification of the minist database using neural networks programmed in python, only with the numpy library
-
 <p align="center">
   <img src="banner.png" >
 </p>
 
+# Neural-Network-Mnist-Dataset
+Repository dedicated to the classification of the minist database using neural networks programmed in python, only with the numpy library.
 
 ## Requirements
 - [Python3](https://www.python.org/downloads/release/python-382/) 
@@ -74,3 +73,11 @@ The validation is composed by the metrics of accuracy recall that are usually us
 ## Conclusion
 
 The artificial neural network implemented in python only with the library numpy obtained a result of Accuracy: 0.9398 and Recal: 0.9400592307897068 for the MNITS dataset.
+
+## about me
+
+Graduation in Information Systems at the Federal University of Piauí, Possibility of experience with developing solutions in the area of Digital Image Processing, Computer Vision and Artificial Intelligence. I currently participate in research projects in the area of Vision and Computational Intelligence.
+
+[LinkedIn](https://www.linkedin.com/in/ryan-sales-2b10141a6/)
+[Lattes](http://lattes.cnpq.br/6944781068896428)
+[Instagram](https://www.instagram.com/sales.ryann/?hl=pt-br)
