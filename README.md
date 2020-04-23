@@ -30,7 +30,7 @@ https://github.com/SalesRyan/Neural-Network-MNIST-Dataset.git
 
 ## Implementation
 
-### [Dataset] (https://www.tensorflow.org/datasets/catalog/mnist)
+### [Dataset](https://www.tensorflow.org/datasets/catalog/mnist)
 
 The MNIST Data set is usually used to measure the efficiency of an algorithm in classifying images, so it was chosen to be the data set to be classified.
 
@@ -63,8 +63,8 @@ The training code snippet happens the prediction of the test set, based on the t
 
 The validation is composed by the metrics of accuracy recall that are usually used for validation of predictions.
 
-- [*Accuracy*] (https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html)
-- [*Recall*] (https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html)
+- [*Accuracy*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html)
+- [*Recall*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html)
 
 ## Conclusion
 
