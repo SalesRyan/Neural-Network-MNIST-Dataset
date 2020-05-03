@@ -26,7 +26,11 @@ class line:
         self.x_y_f = x_y_f
         self.size = size
 
-def scenario(din_x,din_y,n_input,n_hidden,n_output,w_ih,w_ho,image,pred,true,input_value):
+hit = [0]*30
+miss = [0]*30
+epo = [x for x in range(30)]
+
+def scenario(din_x,din_y,n_input,n_hidden,n_output,w_ih,w_ho,image,pred,true,input_value,epoc,sample,t_epoc):
     
     neuron_input = []
     neuron_hidden = []
@@ -98,6 +102,7 @@ def scenario(din_x,din_y,n_input,n_hidden,n_output,w_ih,w_ho,image,pred,true,inp
 
     font_72 = pygame.font.SysFont("comicsansms", 72)
     font_30 = pygame.font.SysFont("comicsansms", 30)
+    font_15 = pygame.font.SysFont("comicsansms", 15)
     
     color = (0,0,0)
     if (pred==true):
@@ -108,10 +113,29 @@ def scenario(din_x,din_y,n_input,n_hidden,n_output,w_ih,w_ho,image,pred,true,inp
     inf_true = font_30.render('True', True, (0,0,0))
     inf_pred = font_30.render('Predict', True, (0,0,0))
     pred_text = font_72.render(str(pred), True, color) 
+    
     gameDisplay.blit(pred_text, (850,300)) 
     gameDisplay.blit(inf_pred,((820,250)))
-    gameDisplay.blit(inf_true,((720,250)))
+    gameDisplay.blit(inf_true,((700,250)))
     
+    global hit
+    global miss
+    global epo
+    
+    if pred == true:
+        hit[epoc] += 1
+    else:
+        miss[epoc] += 1
+    
+    cox = 750
+    coy = 0
+    
+    for e in range(epoc):
+        inf_hit = font_15.render('Hits: {} | Miss: {} in epoch {}/{}'.format(hit[e],miss[e],epo[e],t_epoc), True, (0,0,0))
+        gameDisplay.blit(inf_hit,((cox,coy)))
+        cox += 20
+
+        
     for l in line_in_for_hi:
 
         pygame.draw.line(screen,l.color, l.x_y_i, l.x_y_f,l.size)
@@ -130,9 +154,9 @@ def scenario(din_x,din_y,n_input,n_hidden,n_output,w_ih,w_ho,image,pred,true,inp
     for neu, i in zip(neuron_output,range(len(neuron_output))):
         if i == pred:
             my_color = (126,217,228)
+          
         else:
             my_color = (48,52,53)
-            
         pygame.draw.circle(screen, my_color,neu.coor(), neu.my_size())
 
     pygame.display.flip()

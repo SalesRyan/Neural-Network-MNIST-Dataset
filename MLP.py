@@ -144,13 +144,27 @@ nn = NN(20,20,10)
 
 y_pred = []
 y_true = []
-
+n = 30
 print("Begin")
-for i in range(30):
-    for j in tqdm(range(len(X_train_pca))):
+for i in range(n):
+    for j in tqdm(range(len(X_train_pca[0:100]))):
         w_ih,w_ho, output = nn.train(X_train_pca[j],y_train[j])
 
-        View.scenario(1000,800,20,20,10,w_ih.reshape(400),w_ho.reshape(200),X_train[j].reshape(28,28),output,y_train[j].argmax(),X_train_pca[j])
+        View.scenario(1000,
+                      800,
+                      20,
+                      20,
+                      10,
+                      w_ih.reshape(400),
+                      w_ho.reshape(200),
+                      X_train[j].reshape(28,28),
+                      output,
+                      y_train[j].argmax(),
+                      X_train_pca[j],
+                      i,
+                      j,
+                      n
+                     )
         
 
 for i in (range(len(X_test_pca))):
