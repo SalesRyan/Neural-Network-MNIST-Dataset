@@ -30,6 +30,14 @@ hit = [0]*30
 miss = [0]*30
 epo = [x for x in range(30)]
 
+def loop(lis,gameDisplay):
+    cox = 750
+    coy = 0
+    
+    for l in lis:    
+        gameDisplay.blit(l,((cox,coy)))
+        coy += 20
+        
 def scenario(din_x,din_y,n_input,n_hidden,n_output,w_ih,w_ho,image,pred,true,input_value,epoc,sample,t_epoc):
     
     neuron_input = []
@@ -127,14 +135,21 @@ def scenario(din_x,din_y,n_input,n_hidden,n_output,w_ih,w_ho,image,pred,true,inp
     else:
         miss[epoc] += 1
     
-    cox = 750
-    coy = 0
-    
+
+    str_epo = []
     for e in range(epoc):
         inf_hit = font_15.render('Hits: {} | Miss: {} in epoch {}/{}'.format(hit[e],miss[e],epo[e],t_epoc), True, (0,0,0))
-        gameDisplay.blit(inf_hit,((cox,coy)))
-        cox += 20
-
+        str_epo.append(inf_hit)
+    
+    if len(str_epo) > 5:
+        str_epo = str_epo[len(str_epo)-5:-1]
+        loop(str_epo,gameDisplay)
+    else:
+        loop(str_epo,gameDisplay)
+    
+    
+    inf_hit = font_15.render('Hits: {} | Miss: {} in epoch {}/{}'.format(hit[epoc],miss[epoc],epo[epoc],t_epoc), True, (0,0,0))
+    gameDisplay.blit(inf_hit,((750,20*(len(str_epo)))))
         
     for l in line_in_for_hi:
 
