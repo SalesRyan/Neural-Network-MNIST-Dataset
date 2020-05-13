@@ -145,7 +145,7 @@ def scenario(din_x,din_y,n_input,n_hidden,n_output,w_ih,w_ho,image,pred,true,inp
     
     inf_hit = font_15.render('Hits: {} | Miss: {} in epoch {}/{}'.format(hit[epoc],miss[epoc],epo[epoc],t_epoc), True, (0,0,0))
     gameDisplay.blit(inf_hit,((680,20*(len(str_epo)))))
-
+    
     for l in line_in_for_hi:
 
         pygame.draw.line(screen,l.color, l.x_y_i, l.x_y_f,l.size)
