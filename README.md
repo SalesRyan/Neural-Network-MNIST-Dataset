@@ -81,6 +81,7 @@ visualize the adjustment of weights during training. I programmed an interface w
 You can check it out below.
 Run MLP.py.
 
+![alt text](https://github.com/SalesRyan/Neural-Network-MNIST-Dataset/blob/master/MLP.gif)
 
 ## About me
 
