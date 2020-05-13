@@ -1,6 +1,4 @@
 
-
-
 import numpy as np
 from tqdm import tqdm
 from keras.datasets import mnist
@@ -145,9 +143,9 @@ nn = NN(20,20,10)
 y_pred = []
 y_true = []
 n = 30
-print("Begin")
+
 for i in range(n):
-    for j in tqdm(range(len(X_train_pca[0:100]))):
+    for j in tqdm(range(len(X_train_pca))):
         w_ih,w_ho, output = nn.train(X_train_pca[j],y_train[j])
 
         View.scenario(1000,
@@ -179,4 +177,3 @@ recall = recall_score(y_pred,y_true,average="macro")
 print(cm)
 print("Accuracy:",acc)
 print("Recal:",recall)
-

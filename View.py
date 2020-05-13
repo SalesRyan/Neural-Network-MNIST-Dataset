@@ -31,7 +31,7 @@ miss = [0]*30
 epo = [x for x in range(30)]
 
 def loop(lis,gameDisplay):
-    cox = 750
+    cox = 680
     coy = 0
     
     for l in lis:    
@@ -88,17 +88,12 @@ def scenario(din_x,din_y,n_input,n_hidden,n_output,w_ih,w_ho,image,pred,true,inp
 
     pygame.init()
     screen = pygame.display.set_mode([din_x,din_y])
-
+    clock = pygame.time.Clock()
+    
     pygame.display.set_caption("MLP Train")
 
-    done = False
-    clock = pygame.time.Clock()
- 
-    #while not done:
-    
-
-    #clock.tick(2)
     gameDisplay = pygame.display.set_mode((din_x,din_y))
+    #clock.tick(60)
     
     for event in pygame.event.get(): 
         if event.type == pygame.QUIT: 
@@ -142,15 +137,15 @@ def scenario(din_x,din_y,n_input,n_hidden,n_output,w_ih,w_ho,image,pred,true,inp
         str_epo.append(inf_hit)
     
     if len(str_epo) > 5:
-        str_epo = str_epo[len(str_epo)-5:-1]
+        str_epo = str_epo[len(str_epo)-5:]
         loop(str_epo,gameDisplay)
     else:
         loop(str_epo,gameDisplay)
     
     
     inf_hit = font_15.render('Hits: {} | Miss: {} in epoch {}/{}'.format(hit[epoc],miss[epoc],epo[epoc],t_epoc), True, (0,0,0))
-    gameDisplay.blit(inf_hit,((750,20*(len(str_epo)))))
-        
+    gameDisplay.blit(inf_hit,((680,20*(len(str_epo)))))
+
     for l in line_in_for_hi:
 
         pygame.draw.line(screen,l.color, l.x_y_i, l.x_y_f,l.size)
@@ -175,6 +170,3 @@ def scenario(din_x,din_y,n_input,n_hidden,n_output,w_ih,w_ho,image,pred,true,inp
         pygame.draw.circle(screen, my_color,neu.coor(), neu.my_size())
 
     pygame.display.flip()
-
-
-#pygame.quit()
