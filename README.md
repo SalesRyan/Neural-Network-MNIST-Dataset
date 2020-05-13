@@ -74,6 +74,14 @@ The validation is composed by the metrics of accuracy recall that are usually us
 
 The artificial neural network implemented in python only with the library numpy obtained a result of Accuracy: 0.9398 and Recal: 0.9400592307897068 for the MNITS dataset.
 
+
+## Training view
+
+visualize the adjustment of weights during training. I programmed an interface with pygame, to facilitate visualization it was necessary to use a character resizing algorithm, I chose PCA (Principal Component Snalysis).
+You can check it out below.
+Run MLP.py.
+
+
 ## About me
 
 Graduation in Information Systems at the Federal University of Piauí, Possibility of experience with developing solutions in the area of Digital Image Processing, Computer Vision and Artificial Intelligence. I currently participate in research projects in the area of Vision and Computational Intelligence.
